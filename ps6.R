@@ -10,11 +10,11 @@ ui <- fluidPage(
              titlePanel("About"),
              HTML(paste("This data shows the <strong>temperature deviation</strong> from the 1991-2020 baseline. 
                Displayed below is 5 randomly selected rows of data.")),
-    mainPanel(
-      tableOutput("data")
-    )
-  ),
-  
+             mainPanel(
+               tableOutput("data")
+             )
+    ),
+    
     tabPanel("plots",
              titlePanel("Plot of temperatures by regions"),
              
@@ -23,13 +23,13 @@ ui <- fluidPage(
                  checkboxGroupInput("regions", "Select regions to display:", 
                                     choices = unique(UAH$region), 
                                     selected = unique(UAH$region))
-             ),
-        mainPanel(
-          plotOutput("plot")
-        )
-      )
+               ),
+               mainPanel(
+                 plotOutput("plot")
+               )
+             )
     ),
-  
+    
     tabPanel("table",
              titlePanel("table of average temperature deviations by region"),
              
@@ -38,12 +38,12 @@ ui <- fluidPage(
                  radioButtons("period", "Select Time Period:",
                               c("month", "year", "deacade"), selected = "Years")
                ),
-
-          mainPanel(
-            tableOutput("table")
-          )
-       )
-     )
+               
+               mainPanel(
+                 tableOutput("table")
+               )
+             )
+    )
   )
 )
 

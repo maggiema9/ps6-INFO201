@@ -4,3 +4,5 @@ The selected regions will show up as the boxes are checked.
 
 The table shows the averages over months, years, and decades. The widget is a radio widget
 so only one of the choices can be selected at once. 
+
+here is the URL to the shiny application: http://magma9.shinyapps.io/ps6-INFO201
